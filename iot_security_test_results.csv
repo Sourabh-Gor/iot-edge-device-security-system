@@ -1,0 +1,9 @@
+Device ID,Temp (°C),Humidity (%),RFID,Auth Result,Nonce Valid,MAC Status,Attack Type,Final Verdict,Response Code,Response Time (ms)
+ESP32_01,25.7,53.1,A1B2C3,❌ Failed,✅ New,❌ Tampered,Normal,❌ Rejected,400,11
+ESP32_01,25.9,52.9,A1B2C3,❌ Failed,❌ Reused,✅ Verified,Replay Attempt,❌ Rejected,403,21
+ESP32_02,26.0,51.8,C4D5E6,❌ Failed,✅ New,❌ Tampered,Payload Tampering,❌ Rejected,400,30
+ESP32_03,28.1,60.2,Z9X8Y7,❌ Failed,❌ Unknown,❌ Invalid,Unknown Device,❌ Rejected,400,9
+ESP32_01,26.1,53.0,A1B2C3,❌ Failed,❌ Reused,✅ Verified,Delayed Replay,❌ Rejected,403,5
+ESP32_04,27.0,55.5,F1E2D3,❌ Failed,✅ New,❌ Tampered,Forged ID,❌ Rejected,400,30
+ESP32_01,26.3,54.1,A1B2C3,❌ Failed,✅ New,❌ Tampered,Authentication Failure,❌ Rejected,400,31
+ESP32_01,26.5,54.8,A1B2C3,❌ Failed,✅ New,❌ Tampered,MAC Forgery,❌ Rejected,400,29

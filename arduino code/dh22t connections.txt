@@ -1,0 +1,3 @@
++(VCC) - Vin(5v)
+OUT - D4
+-(GND) - GND

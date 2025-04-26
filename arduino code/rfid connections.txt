@@ -1,0 +1,8 @@
+SDA(SS) - D2
+SCK - D18
+MOSI - D23
+MISO - D19
+IRQ - Don't Connect
+GND - GND
+RST - D21
+3.3V - 3.3V (NO Vin(5.5V))

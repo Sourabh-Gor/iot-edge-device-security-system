@@ -1,0 +1,82 @@
+[DEBUG] Incoming Request:
+{
+  "timestamp": "2025-04-27T00:01:22.611200",
+  "method": "POST",
+  "url": "http://192.168.29.128:5000/check_key",
+  "remote_addr": "192.168.29.84",
+  "headers": {
+    "User-Agent": "ESP32HTTPClient",
+    "Connection": "keep-alive",
+    "Accept-Encoding": "identity;q=1,chunked;q=0.1,*;q=0",
+    "Content-Type": "application/json",
+    "Content-Length": "206"
+  },
+  "body": {
+    "device_name": "ESP32_6fc55494",
+    "puf_hash": "44cb730c420480a0477b505ae68af508fb90f96cf0ec54c6ad16949dd427f13a",
+    "nonce": "gr07unj2uofh",
+    "mac": "748eae92ae71b6701dd58e60ea2a4f6502960de6140f537131b496d5fff034a6"
+  }
+}
+
+[DEBUG] Incoming Request:
+{
+  "timestamp": "2025-04-27T00:01:22.711450",
+  "method": "POST",
+  "url": "http://192.168.29.128:5000/generate_challenge",
+  "remote_addr": "192.168.29.84",
+  "headers": {
+    "User-Agent": "ESP32HTTPClient",
+    "Connection": "keep-alive",
+    "Accept-Encoding": "identity;q=1,chunked;q=0.1,*;q=0",
+    "Content-Type": "application/json",
+    "Content-Length": "32"
+  },
+  "body": {
+    "device_name": "ESP32_6fc55494"
+  }
+}
+
+[DEBUG] Incoming Request:
+{
+  "timestamp": "2025-04-27T00:01:22.924373",
+  "method": "POST",
+  "url": "http://192.168.29.128:5000/register_key",
+  "remote_addr": "192.168.29.84",
+  "headers": {
+    "User-Agent": "ESP32HTTPClient",
+    "Connection": "keep-alive",
+    "Accept-Encoding": "identity;q=1,chunked;q=0.1,*;q=0",
+    "Content-Type": "application/json",
+    "Content-Length": "306"
+  },
+  "body": {
+    "device_name": "ESP32_6fc55494",
+    "challenge_response": "b0afa88efb779918",
+    "nonce": "4lv7mdlwes1f",
+    "encrypted_key": "NGx2N21kbHdlczFm:p7//K5hIfk7IIOGSdFNZcpHi",
+    "puf_hash": "44cb730c420480a0477b505ae68af508fb90f96cf0ec54c6ad16949dd427f13a",
+    "mac": "be65cc4b69eee40ef4cac323ce496fbfe4223e3b1beb5ee3cb37733c6fd7ea8c"
+  }
+}
+
+[DEBUG] Incoming Request:
+{
+  "timestamp": "2025-04-27T00:01:23.251321",
+  "method": "POST",
+  "url": "http://192.168.29.128:5000/receive_data",
+  "remote_addr": "192.168.29.84",
+  "headers": {
+    "User-Agent": "ESP32HTTPClient",
+    "Connection": "keep-alive",
+    "Accept-Encoding": "identity;q=1,chunked;q=0.1,*;q=0",
+    "Content-Type": "application/json",
+    "Content-Length": "194"
+  },
+  "body": {
+    "device_name": "ESP32_6fc55494",
+    "data": "MTMwQzBDMDkxMjEwMTAwQzBDMDkxMjEwNzY1OTUxNDgwMjZFNDQ1NTQ2",
+    "nonce": "swd6w5po1vj7",
+    "mac": "74299490ba878ffc5288bb64e6302b68e08ddde90fff992aeeb7fcd117738225"
+  }
+}

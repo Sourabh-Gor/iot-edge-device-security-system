@@ -1,0 +1,26 @@
+digraph {
+	rankdir=TB size="8,10"
+	PUF [label="Generate PUF from RAM" color=black fillcolor=lightblue fontname=Arial fontsize=12 shape=box style="rounded, filled"]
+	CORR [label="Correct Errors in PUF" color=black fillcolor=lightblue fontname=Arial fontsize=12 shape=box style="rounded, filled"]
+	SEED [label="Generate Seed (32-bit from PUF)" color=black fillcolor=lightblue fontname=Arial fontsize=12 shape=box style="rounded, filled"]
+	KEYGEN [label="Produce 10 Key Streams
+Using Seed" color=black fillcolor=lightblue fontname=Arial fontsize=12 shape=box style="rounded, filled"]
+	DATA [label="Input Data (HELLO HOW...)
+Length = 23" color=black fillcolor=lightblue fontname=Arial fontsize=12 shape=box style="rounded, filled"]
+	ENCRYPT [label="Encrypt Data Using
+Key Streams + XOR" color=black fillcolor=lightblue fontname=Arial fontsize=12 shape=box style="rounded, filled"]
+	MAC [label="Compute MAC and Nonce" color=black fillcolor=lightblue fontname=Arial fontsize=12 shape=box style="rounded, filled"]
+	ENCODE [label="Base64 Encode Encrypted
+Data, MAC, and Nonce" color=black fillcolor=lightblue fontname=Arial fontsize=12 shape=box style="rounded, filled"]
+	PUFCHK [label="Attach PUF if Regenerated" color=black fillcolor=lightblue fontname=Arial fontsize=12 shape=box style="rounded, filled"]
+	SEND [label="Transmit to Server" color=black fillcolor=lightblue fontname=Arial fontsize=12 shape=box style="rounded, filled"]
+	PUF -> CORR [label="PUF stabilization"]
+	CORR -> SEED [label="Extract 32 bits"]
+	SEED -> KEYGEN [label="Seed-based key gen."]
+	KEYGEN -> DATA [label="Prepare input"]
+	DATA -> ENCRYPT [label="Encryption process"]
+	ENCRYPT -> MAC [label="Generate MAC"]
+	MAC -> ENCODE [label=Encode]
+	ENCODE -> PUFCHK [label="Add PUF if new"]
+	PUFCHK -> SEND [label="Send securely"]
+}
